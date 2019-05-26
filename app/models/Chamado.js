@@ -43,5 +43,12 @@ module.exports = (sequelize, DataType) => {
         })        
     }
 
+    Chamado.adicionar = function(descricao, id_usuario){
+        return Chamado.create({
+            descricao: descricao,
+            id_usuario: id_usuario
+        })
+    }
+
     return Chamado;
 }

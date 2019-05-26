@@ -7,8 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <%= usuarios[0].nome %>
-    <br>
-    <%= chamados[0].descricao %>
+    <% for(key in usuarios){ %>
+        <p><%= usuarios[key].nome %></p>
+    <% } %>
+
+    <% for(key in chamados){ %>
+        <p><%= chamados[key].descricao %></p>        
+    <% } %>
+
 </body>
 </html>

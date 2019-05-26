@@ -45,3 +45,17 @@ module.exports.index = function(application, req, res){
     });
     */
 }
+
+module.exports.adicionar = function(application, req, res){
+
+    var Chamado = application.config.database.models.Chamado;
+
+    Chamado.adicionar('Chamado de teste', 1)
+    .then(result =>{
+        res.json(result);
+    })
+    .catch(err => {
+        console.log(err);
+    })
+
+}
